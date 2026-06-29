@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.13 on win32)" generated="2026-06-28T22:42:51.268937" rpa="false" schemaversion="5">
+<suite id="s1" name="CT001 LoginSucesso" source="C:\MeuProjetoRobot\testes\CT001_LoginSucesso.robot">
+<test id="s1-t1" name="Login com Sucesso" line="5">
+<kw name="Abrir Navegador Na Pagina De Login" owner="Login.Page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-28T22:42:51.659870" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-28T22:42:51.659667" elapsed="9.333820"/>
+</kw>
+<status status="PASS" start="2026-06-28T22:42:51.658676" elapsed="9.337551"/>
+</kw>
+<kw name="Preencher Credenciais" owner="Login.Page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-28T22:43:00.999850" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-28T22:43:00.998217" elapsed="0.169302"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-06-28T22:43:01.168373" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-06-28T22:43:01.199325" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>${senha}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-28T22:43:01.167834" elapsed="0.075015"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-06-28T22:43:00.997028" elapsed="0.246114"/>
+</kw>
+<kw name="Clicar No Botao Login" owner="Login.Page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-06-28T22:43:01.245316" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-28T22:43:01.244833" elapsed="0.134865"/>
+</kw>
+<status status="PASS" start="2026-06-28T22:43:01.244143" elapsed="0.136044"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-06-28T22:43:01.408170" level="INFO">Current page contains element 'css=.inventory_list'.</msg>
+<arg>css=.inventory_list</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-06-28T22:43:01.380841" elapsed="0.027610"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-28T22:43:01.507668" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_success.png"&gt;&lt;img src="login_success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>login_success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-28T22:43:01.409223" elapsed="0.098612"/>
+</kw>
+<kw name="Fechar Navegador" owner="Login.Page">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-28T22:43:01.509001" elapsed="2.281094"/>
+</kw>
+<status status="PASS" start="2026-06-28T22:43:01.508657" elapsed="2.281731"/>
+</kw>
+<status status="PASS" start="2026-06-28T22:42:51.657875" elapsed="12.133214"/>
+</test>
+<status status="PASS" start="2026-06-28T22:42:51.270766" elapsed="12.523014"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="CT001 LoginSucesso" id="s1" pass="1" fail="0" skip="0">CT001 LoginSucesso</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

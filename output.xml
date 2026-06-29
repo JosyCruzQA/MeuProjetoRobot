@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.13 on win32)" generated="2026-06-28T22:42:51.268937" rpa="false" schemaversion="5">
-<suite id="s1" name="CT001 LoginSucesso" source="C:\MeuProjetoRobot\testes\CT001_LoginSucesso.robot">
-<test id="s1-t1" name="Login com Sucesso" line="5">
+<robot generator="Robot 7.4.2 (Python 3.13.13 on win32)" generated="2026-06-29T12:01:17.937381" rpa="false" schemaversion="5">
+<suite id="s1" name="CT002 Login Invalido" source="C:\MeuProjetoRobot\testes\CT002_Login_Invalido.robot">
+<test id="s1-t1" name="Login com Senha Invalida" line="6">
 <kw name="Abrir Navegador Na Pagina De Login" owner="Login.Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-28T22:42:51.659870" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-06-29T12:01:18.331449" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-28T22:42:51.659667" elapsed="9.333820"/>
+<status status="PASS" start="2026-06-29T12:01:18.331241" elapsed="2.879001"/>
 </kw>
-<status status="PASS" start="2026-06-28T22:42:51.658676" elapsed="9.337551"/>
+<status status="PASS" start="2026-06-29T12:01:18.330338" elapsed="2.882848"/>
 </kw>
 <kw name="Preencher Credenciais" owner="Login.Page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-28T22:43:00.999850" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2026-06-29T12:01:21.216863" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>${usuario}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-28T22:43:00.998217" elapsed="0.169302"/>
+<status status="PASS" start="2026-06-29T12:01:21.215401" elapsed="0.132299"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-06-28T22:43:01.168373" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2026-06-28T22:43:01.199325" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-06-29T12:01:21.348910" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-06-29T12:01:21.376870" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=password</arg>
 <arg>${senha}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-28T22:43:01.167834" elapsed="0.075015"/>
+<status status="PASS" start="2026-06-29T12:01:21.348133" elapsed="0.094181"/>
 </kw>
 <arg>standard_user</arg>
-<arg>secret_sauce</arg>
-<status status="PASS" start="2026-06-28T22:43:00.997028" elapsed="0.246114"/>
+<arg>secret_sauce123</arg>
+<status status="PASS" start="2026-06-29T12:01:21.214205" elapsed="0.228467"/>
 </kw>
 <kw name="Clicar No Botao Login" owner="Login.Page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-28T22:43:01.245316" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-06-29T12:01:21.444517" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-28T22:43:01.244833" elapsed="0.134865"/>
+<status status="PASS" start="2026-06-29T12:01:21.444010" elapsed="0.096454"/>
 </kw>
-<status status="PASS" start="2026-06-28T22:43:01.244143" elapsed="0.136044"/>
+<status status="PASS" start="2026-06-29T12:01:21.443500" elapsed="0.097406"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2026-06-28T22:43:01.408170" level="INFO">Current page contains element 'css=.inventory_list'.</msg>
-<arg>css=.inventory_list</arg>
+<msg time="2026-06-29T12:01:21.556980" level="INFO">Current page contains element 'css=h3[data-test="error"]'.</msg>
+<arg>css=h3[data-test="error"]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2026-06-28T22:43:01.380841" elapsed="0.027610"/>
+<status status="PASS" start="2026-06-29T12:01:21.541727" elapsed="0.015565"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-06-28T22:43:01.507668" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_success.png"&gt;&lt;img src="login_success.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_success.png</arg>
+<msg time="2026-06-29T12:01:21.670194" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_invalido.png"&gt;&lt;img src="login_invalido.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>login_invalido.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-06-28T22:43:01.409223" elapsed="0.098612"/>
+<status status="PASS" start="2026-06-29T12:01:21.558158" elapsed="0.112357"/>
 </kw>
 <kw name="Fechar Navegador" owner="Login.Page">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-28T22:43:01.509001" elapsed="2.281094"/>
+<status status="PASS" start="2026-06-29T12:01:21.672342" elapsed="2.227396"/>
 </kw>
-<status status="PASS" start="2026-06-28T22:43:01.508657" elapsed="2.281731"/>
+<status status="PASS" start="2026-06-29T12:01:21.671472" elapsed="2.228560"/>
 </kw>
-<status status="PASS" start="2026-06-28T22:42:51.657875" elapsed="12.133214"/>
+<status status="PASS" start="2026-06-29T12:01:18.329567" elapsed="5.571161"/>
 </test>
-<status status="PASS" start="2026-06-28T22:42:51.270766" elapsed="12.523014"/>
+<status status="PASS" start="2026-06-29T12:01:17.939186" elapsed="5.964067"/>
 </suite>
 <statistics>
 <total>
@@ -71,7 +71,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="CT001 LoginSucesso" id="s1" pass="1" fail="0" skip="0">CT001 LoginSucesso</stat>
+<stat name="CT002 Login Invalido" id="s1" pass="1" fail="0" skip="0">CT002 Login Invalido</stat>
 </suite>
 </statistics>
 <errors>

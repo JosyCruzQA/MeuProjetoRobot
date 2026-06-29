@@ -1,20 +1,15 @@
 *** Settings ***
-Library    SeleniumLibrary
+Resource    ../resources/Login.Page.robot
 
-*** Variables ***
-${URL}    https://www.saucedemo.com/    
-${USERNAME}    standard_user
-${PASSWORD}    secret_sauce123
 
 *** Test Cases ***
-Login com Senha inválida
-    Open Browser    ${URL}    Chrome
-    Input Text        id=user-name    ${USERNAME}
-    Input Password    id=password     ${PASSWORD}
-    Click Button      id=login-button
-    Page Should Contain Element   css=.inventory_list
-    Capture Page Screenshot    login_success.png
-    Close Browser   
+Login com Senha Invalida
+    Abrir Navegador Na Pagina De Login
+    Preencher Credenciais    standard_user    secret_sauce123
+    Clicar No Botao Login
+    Page Should Contain Element    css=h3[data-test="error"]
+    Capture Page Screenshot    login_invalido.png
+    Fechar Navegador  
 
 
 

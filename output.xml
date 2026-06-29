@@ -1,68 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.13 on win32)" generated="2026-06-29T12:53:02.539077" rpa="false" schemaversion="5">
-<suite id="s1" name="CT003 Logincomusuario branco" source="C:\MeuProjetoRobot\testes\CT003_Logincomusuario_branco.robot">
-<test id="s1-t1" name="Login com usuario em branco" line="5">
+<robot generator="Robot 7.4.2 (Python 3.13.13 on win32)" generated="2026-06-29T17:31:18.536999" rpa="false" schemaversion="5">
+<suite id="s1" name="CT004 LogincomSenha branco" source="C:\MeuProjetoRobot\testes\CT004_LogincomSenha_branco.robot">
+<test id="s1-t1" name="CT004_LogincomSenha_branco" line="5">
 <kw name="Abrir Navegador Na Pagina De Login" owner="Login.Page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-29T12:53:02.881300" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-06-29T17:31:19.010613" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-29T12:53:02.880993" elapsed="2.292578"/>
+<status status="PASS" start="2026-06-29T17:31:19.010241" elapsed="5.682668"/>
 </kw>
-<status status="PASS" start="2026-06-29T12:53:02.878880" elapsed="2.294882"/>
+<status status="PASS" start="2026-06-29T17:31:19.008693" elapsed="5.687194"/>
 </kw>
 <kw name="Preencher Credenciais" owner="Login.Page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-29T12:53:05.176195" level="INFO">Typing text '' into text field 'id=user-name'.</msg>
+<msg time="2026-06-29T17:31:24.700097" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>${usuario}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-29T12:53:05.175711" elapsed="0.114794"/>
+<status status="PASS" start="2026-06-29T17:31:24.698775" elapsed="0.180163"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-06-29T12:53:05.292008" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2026-06-29T12:53:05.329066" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-06-29T17:31:24.879997" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-06-29T17:31:24.934575" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=password</arg>
 <arg>${senha}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-29T12:53:05.291037" elapsed="0.072867"/>
+<status status="PASS" start="2026-06-29T17:31:24.879344" elapsed="0.102594"/>
 </kw>
+<arg>standard_user</arg>
 <arg>${EMPTY}</arg>
-<arg>${EMPTY}</arg>
-<status status="PASS" start="2026-06-29T12:53:05.174419" elapsed="0.189754"/>
+<status status="PASS" start="2026-06-29T17:31:24.697054" elapsed="0.285183"/>
 </kw>
 <kw name="Clicar No Botao Login" owner="Login.Page">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-29T12:53:05.366345" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-06-29T17:31:24.983987" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-29T12:53:05.365807" elapsed="0.089176"/>
+<status status="PASS" start="2026-06-29T17:31:24.983452" elapsed="0.089737"/>
 </kw>
-<status status="PASS" start="2026-06-29T12:53:05.365104" elapsed="0.090038"/>
+<status status="PASS" start="2026-06-29T17:31:24.982985" elapsed="0.090465"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2026-06-29T12:53:05.467542" level="INFO">Current page contains element 'css=.error-message-container'.</msg>
+<msg time="2026-06-29T17:31:25.088882" level="INFO">Current page contains element 'css=.error-message-container'.</msg>
 <arg>css=.error-message-container</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2026-06-29T12:53:05.455902" elapsed="0.011847"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-06-29T12:53:05.582316" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login_blank_user.png"&gt;&lt;img src="login_blank_user.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>login_blank_user.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-06-29T12:53:05.468427" elapsed="0.114077"/>
+<status status="PASS" start="2026-06-29T17:31:25.073876" elapsed="0.015248"/>
 </kw>
 <kw name="Fechar Navegador" owner="Login.Page">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-06-29T12:53:05.588239" elapsed="2.205578"/>
+<status status="PASS" start="2026-06-29T17:31:25.090488" elapsed="2.218756"/>
 </kw>
-<status status="PASS" start="2026-06-29T12:53:05.587464" elapsed="2.206715"/>
+<status status="PASS" start="2026-06-29T17:31:25.089747" elapsed="2.219754"/>
 </kw>
-<status status="PASS" start="2026-06-29T12:53:02.877036" elapsed="4.917925"/>
+<status status="PASS" start="2026-06-29T17:31:19.007522" elapsed="8.302513"/>
 </test>
-<status status="PASS" start="2026-06-29T12:53:02.540678" elapsed="5.256835"/>
+<status status="PASS" start="2026-06-29T17:31:18.540806" elapsed="8.771002"/>
 </suite>
 <statistics>
 <total>
@@ -71,7 +65,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="CT003 Logincomusuario branco" id="s1" pass="1" fail="0" skip="0">CT003 Logincomusuario branco</stat>
+<stat name="CT004 LogincomSenha branco" id="s1" pass="1" fail="0" skip="0">CT004 LogincomSenha branco</stat>
 </suite>
 </statistics>
 <errors>

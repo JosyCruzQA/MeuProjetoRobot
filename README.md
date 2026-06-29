@@ -36,6 +36,7 @@ Rodar todos os testes:
 | CT001 | Login com sucesso | ✅ |
 | CT002 | Login inválido | ✅ |
 | CT003 | Login com usuário em branco | ✅ |
+| CT004 | Login com senha em branco | ✅|
 ## 👩‍💻 Autora
 
 **Josiane Barbosa Cruz**  

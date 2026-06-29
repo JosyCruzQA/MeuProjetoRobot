@@ -8,4 +8,4 @@ Login com usuario em branco
     Clicar No Botao Login
     Page Should Contain Element    css=.error-message-container
     Capture Page Screenshot    login_blank_user.png
-    Fechar Navegador
+    Fechar NavegadorS
